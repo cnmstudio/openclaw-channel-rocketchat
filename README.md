@@ -19,7 +19,7 @@ Rocket.Chat 机器人 Channel 插件，使用 Webhook 模式进行双向通信�
 直接运行 openclaw 插件安装命令，openclaw 会自动处理下载、安装依赖和注册：
 
 ```
-openclaw plugins install https://github.com/your-repo/openclaw-channel-rocketchat.git
+openclaw plugins install https://github.com/cnmstudio/openclaw-channel-rocketchat.git
 ```
 
 ### 方法 B：通过本地源码安装
@@ -28,7 +28,7 @@ openclaw plugins install https://github.com/your-repo/openclaw-channel-rocketcha
 
 ```bash
 # 1. 克隆仓库
-git clone https://github.com/your-repo/openclaw-channel-rocketchat.git
+git clone https://github.com/cnmstudio/openclaw-channel-rocketchat.git
 cd openclaw-channel-rocketchat
 
 # 2. 安装依赖 (必需)
@@ -57,7 +57,7 @@ openclaw plugins install -l .
    - **通道**: 你想监听的频道 (或留空监听所有)
    - **URLs**: `https://your-openclaw-server/hooks/rocketchat/default` (将 `your-openclaw-server` 替换为你的服务器地址)
    - **触发单词**: 可选，如果你想通过特定单词触发
-   - **令牌**: 记住这个令牌，将在 OpenClaw 配置中使用
+   - **令牌**: 记住这个令牌，将在 OpenClaw 配置中使用。
 
 ### 2. 配置 OpenClaw
 
