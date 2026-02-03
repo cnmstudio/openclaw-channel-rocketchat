@@ -1,0 +1,61 @@
+{
+  "name": "@openclaw/rocketchat",
+  "version": "1.0.0",
+  "description": "Rocket.Chat channel plugin for OpenClaw",
+  "main": "index.ts",
+  "type": "module",
+  "scripts": {
+    "type-check": "tsc --noEmit",
+    "lint": "eslint index.ts src/",
+    "lint:fix": "eslint --fix index.ts src/ && prettier --write index.ts src/"
+  },
+  "keywords": [
+    "openclaw",
+    "rocketchat",
+    "channel",
+    "webhook",
+    "bot"
+  ],
+  "author": "OpenClaw",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "openclaw": "^2026.1.29",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.3.0"
+  },
+  "openclaw": {
+    "extensions": [
+      "./index.ts"
+    ],
+    "channels": [
+      "rocketchat"
+    ],
+    "installDependencies": true,
+    "channel": {
+      "id": "rocketchat",
+      "label": "Rocket.Chat",
+      "selectionLabel": "Rocket.Chat",
+      "docsPath": "/channels/rocketchat",
+      "docsLabel": "rocketchat",
+      "blurb": "Rocket.Chat messaging via Webhook mode.",
+      "order": 80,
+      "aliases": [
+        "rc",
+        "rocket"
+      ]
+    },
+    "install": {
+      "npmSpec": "@openclaw/rocketchat",
+      "localPath": "extensions/rocketchat-channel",
+      "defaultChoice": "local"
+    }
+  }
+}
